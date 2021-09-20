@@ -1,0 +1,25 @@
+
+class GFG {
+           public static void removeDuplicates(int[] a)
+           {
+             
+             int i=0;
+             for(int j=i;j<a.length;j++)
+             {
+                 if(a[j]!=a[i])
+                 {
+                     i++;
+                     a[i]=a[j];
+                 }
+             }
+             return i+1;
+           }
+           public static void main(String[] args)
+           {
+               int[] a  = {1,2,2,3,4,5,5};
+               
+               
+             removeDuplicates(a);
+           }
+ 
+}
