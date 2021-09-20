@@ -1,0 +1,26 @@
+import java.io.*;
+import java.lang.*;
+
+public class Gfg{
+    public static void main(String[] args)
+    {
+      int n = 7;
+      int sum = 0;
+      for(int i=1;i<n;i++)
+      {
+          if(n%i==0)
+          {
+              System.out.println(i);
+             sum = sum+i;
+          }
+         
+      }
+      if(n==sum)
+      {
+          System.out.println("It is a perfect Square");
+      }
+      else{
+          System.out.println("It is not a Perfect Square");
+      }
+    }
+}
