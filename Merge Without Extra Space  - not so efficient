@@ -1,0 +1,28 @@
+
+class Solution {
+
+    public void merge(int arr1[], int arr2[], int n, int m) {
+        for (int i = 0; i < n; i++)
+        {
+            // compare the current element of `X[]` with the first element of `Y[]`
+            if (arr1[i] > arr2[0])
+            {
+                // swap `X[i] with `Y[0]`
+                int temp = arr1[i];
+                arr1[i] = arr2[0];
+                arr2[0] = temp;
+ 
+                int first = arr2[0];
+ 
+                // move `Y[0]` to its correct position to maintain the sorted
+                // order of `Y[]`. Note: `Y[1…n-1]` is already sorted
+                int k;
+                for (k = 1; k < m && arr2[k] < first; k++) {
+                    arr2[k - 1] = arr2[k];
+                }
+ 
+                arr2[k - 1] = first;
+            }
+        }
+}
+}
