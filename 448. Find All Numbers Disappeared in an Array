@@ -1,0 +1,21 @@
+       448. Find All Numbers Disappeared in an Array
+       
+       class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        ArrayList<Integer> ans = new ArrayList<Integer>();
+        for(int val:nums)
+        {
+            if(map.containsKey(val))
+            {
+                ans.add(val);
+            }
+            else
+            {
+              map.put(val,1);
+            }
+        }
+        return ans;
+        
+    }
+}
